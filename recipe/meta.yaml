@@ -22,25 +22,32 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-cli >=2.0.0
-    - r-ellipsis >=0.2.0
-    - r-generics
-    - r-glue
-    - r-hardhat
-    - r-parsnip >=0.0.4
-    - r-rlang >=0.4.1
+    - r-cli >=3.3.0
+    - r-generics >=0.1.2
+    - r-glue >=1.6.2
+    - r-hardhat >=1.2.0
+    - r-lifecycle >=1.0.3
+    - r-modelenv >=0.1.0
+    - r-parsnip >=1.0.3
+    - r-rlang >=1.0.3
+    - r-tidyselect >=1.2.0
+    - r-vctrs >=0.4.1
   run:
     - r-base
-    - r-cli >=2.0.0
-    - r-ellipsis >=0.2.0
-    - r-generics
-    - r-glue
-    - r-hardhat
-    - r-parsnip >=0.0.4
-    - r-rlang >=0.4.1
+    - r-cli >=3.3.0
+    - r-generics >=0.1.2
+    - r-glue >=1.6.2
+    - r-hardhat >=1.2.0
+    - r-lifecycle >=1.0.3
+    - r-modelenv >=0.1.0
+    - r-parsnip >=1.0.3
+    - r-rlang >=1.0.3
+    - r-tidyselect >=1.2.0
+    - r-vctrs >=0.4.1
 
 test:
   commands:
@@ -48,7 +55,8 @@ test:
     - "\"%R%\" -e \"library('workflows')\""  # [win]
 
 about:
-  home: https://github.com/tidymodels/workflows
+  home: https://workflows.tidymodels.org
+  dev_url: https://github.com/tidymodels/workflows
   license: MIT
   summary: Managing both a 'parsnip' model and a preprocessor, such as a model formula or recipe from 'recipes', can often be challenging. The goal of 'workflows' is to streamline this process by bundling the model alongside the preprocessor, all within the same object.
   license_family: MIT
@@ -59,25 +67,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-
-# Package: workflows
-# Title: Modeling Workflows
-# Version: 0.1.0
-# Authors@R: c(person(given = "Davis", family = "Vaughan", role = c("aut", "cre"), email = "davis@rstudio.com"), person(given = "RStudio", role = "cph"))
-# Description: Managing both a 'parsnip' model and a preprocessor, such as a model formula or recipe from 'recipes', can often be challenging. The goal of 'workflows' is to streamline this process by bundling the model alongside the preprocessor, all within the same object.
-# License: MIT + file LICENSE
-# URL: https://github.com/tidymodels/workflows
-# BugReports: https://github.com/tidymodels/workflows/issues
-# Depends: R (>= 3.2)
-# Imports: cli (>= 2.0.0), ellipsis (>= 0.2.0), generics, glue, hardhat, parsnip (>= 0.0.4), rlang (>= 0.4.1)
-# Suggests: covr, knitr, recipes, rmarkdown, testthat (>= 2.3.0)
-# VignetteBuilder: knitr
-# Encoding: UTF-8
-# LazyData: true
-# RoxygenNote: 7.0.2
-# NeedsCompilation: no
-# Packaged: 2019-12-17 21:36:51 UTC; davis
-# Author: Davis Vaughan [aut, cre], RStudio [cph]
-# Maintainer: Davis Vaughan <davis@rstudio.com>
-# Repository: CRAN
-# Date/Publication: 2019-12-30 14:00:02 UTC
