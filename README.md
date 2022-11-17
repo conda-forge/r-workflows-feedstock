@@ -1,13 +1,15 @@
 About r-workflows
 =================
 
-Home: https://github.com/tidymodels/workflows
+Home: https://workflows.tidymodels.org
 
 Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-workflows-feedstock/blob/main/LICENSE.txt)
 
 Summary: Managing both a 'parsnip' model and a preprocessor, such as a model formula or recipe from 'recipes', can often be challenging. The goal of 'workflows' is to streamline this process by bundling the model alongside the preprocessor, all within the same object.
+
+Development: https://github.com/tidymodels/workflows
 
 Current build status
 ====================
